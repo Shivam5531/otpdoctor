@@ -86,7 +86,7 @@ def background_worker(user_id):
 
 def cancel_activation(activation_id, user_data):
     cancel_params = {
-        "action": "setstatus",
+        "action": "getstatus",
         "api_key": api_key,  # ✅ correct type
         "id": activation_id,
         "status": 8  # 8 means cancel
@@ -146,7 +146,7 @@ def index():
         </style>
     </head>
     <body>
-        <h1>🔐 Reddyacc Dashboard</h1>
+        <h1>🔐 OTP DOCTOR</h1>
         <div class="box">📶 API Calls: {{calls}}</div>
         <div class="box">💰 Balance: {{balance}}</div>
         <div class="box">📱 Number: {{phone}}</div>
